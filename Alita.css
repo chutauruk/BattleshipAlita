@@ -1,0 +1,18 @@
+.winning-message button{
+    border-radius: 10px;
+    font-size: 3rem;
+    background-color: white;
+    border: 1 px solid var(--color-set);
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: var(--color-set);
+    color: white;
+    border-color: white;
+}
+
+.winning-message.show {
+    display:flex;
+}
