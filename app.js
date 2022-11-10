@@ -38,46 +38,44 @@
 //     alienArray.push(alienShips);
 // };
 
-// AlienShip("Alien Alpha",)
-
 // Define Objects/ Classes
-// class shipAlien1 = 
-// 	constructor(name, hull, firepower, accuracy) {
-// 	this.name = name;
-// 	this.hull = hull;
-// 	this.firepower = firepower;
-// 	this.accuracy = accuracy;
-//     this.isAlive = isAlive;
-// }
+let battleshipAlita =  {
+	name: "Alita",
+	hull: 20,
+	firepower: 5,
+	accuracy: 0.7,
+  isAlive: true,
+}
 
+class shipAlien { 
+	constructor(name, hull, firepower, accuracy, isAlive) {
+	this.name = name,
+	this.hull = hull,
+	this.firepower = firepower,
+	this.accuracy = accuracy,
+  this.isAlive = isAlive
+  }
+}
 
+//Create an array for remaining aliens (6)
+let alienArray = [];
+const ship = () => {
+for (let i=0; i<=6; i++)
+{
+  let name = `Alien ${i}`
+  let hull = Math.floor(Math.random()*4) +3
+	let firepower = Math.floor(Math.random()*3) +2
+	let accuracy = Math.floor((Math.random()*3) +6)/10
+  let isAlive = true
+  let shipAliens = new shipAlien(name, hull, firepower, accuracy, isAlive)
+  console.log(shipAliens)
+  alienArray.push(shipAliens)
+};
+}
 
+ship();
 
-// let battleshipAlita =  {
-// 	name: “Alita”,
-// 	hull: 20,
-// 	firepower: 5,
-// 	accuracy: 0.7,
-//     isAlive: true,
-// 	attack:
-// function () {
-// let attackHit = Math.random();
-// If (attackHit < alien[0].accuracy) {
-// 	return true;
-// 	console.log(‘You have been hit!);
-// } else {
-// 	return false;
-// }
-// },
-// };
-
-// class shipAlien1 = 
-// 	constructor(name, hull, firepower, accuracy) {
-// 	this.name = name;
-// 	this.hull = hull;
-// 	this.firepower = firepower;
-// 	this.accuracy = accuracy;
-// }
+// //Attacks
 // function attack () {
 // let attackHit = Math.random();
 // If (attackHit < alien[0].accuracy) {
@@ -87,19 +85,52 @@
 // 	return false;
 // }
 // };
-
-// //Attacks
+// }
 
 // //Let the Games Begin
+let gameStart = prompt("Let the game begin! You are given two choices. If you choose to (R)etreat, the game ends now and you forfeit the ship. If you choose to (A)ttack, you may remain undefeated to roam the universe. What will you choose?")
+          if(gameStart === "a" || gameStart === "attack" || gameStart === "A" || gameStart === "Attack") {
+            gameAttack(battleshipAlita,shipAlien)
+          } else if (gameStart === "r" || gameStart === "retreat" || gameStart === "R" || gameStart === "Retreat") {
+            alert("You quit!! Game over!!");
+          };
 
-let gameBegin = prompt("Let the game begin! You are given two choices. If you choose to (R)etreat, the game ends now and you forfeit the ship. If you choose to (A)ttack, you may remain undefeated to roam the universe. What will you choose?")
-          if(gameBegin === "a" || gameBegin === "attack" || gameBegin === "A" || gameBegin === "Attack") {
-            attack 
-          }
+ gameAttack(battleshipAlita,shipAlien);
 
+ while (battleshipAlita.isAlive = true) {
+  if (battleshipAlita.hull > 0) {
+    console.log(`Your ship's Hull is currently at ${}.`)
+  }
+  if (alienShip )
+  if (attack === true) {
+    console.log("successful hit")
+  } else {
+    console.log("Oops! You missed! Try again.")
+  }
+ }
 
-//gameBegin ()
-//gameBegin === "r" || gameBegin === "retreat" || gameBegin === "R" || gameBegin === "Retreat" ||           
+          
+        //   attack(target) {
+        //     let ranNum = Math.random();
+        //     //alert(`Accuracy threshold is ${ranNum}`);
+        //     if (ranNum < this.accuracy) {
+        //       //target defeted!
+        //         alert(target.name + ` been direct hit!`);
+        //         //console.log(target)
+        //         target.hull = target.hull - this.firepower;
+        //         alert(target.name + ` has ${target.hull} hull points left.`);
+        //         if (target.hull <= 0) {
+        //             target.isAlive = false;
+        //             alert(target.name + ` died!`);
+        //         }
+        //     } else {
+        //       //target escaped
+        //       alert(this.name + ` missed the target ${target.name}!`);
+        //     }
+      
+        // }
+      
+//gameBegin ()      
 
 
 // startButton.addEventListener('click', startGame)
