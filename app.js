@@ -97,17 +97,17 @@ let gameStart = prompt("Let the game begin! You are given two choices. If you ch
 
  gameAttack(battleshipAlita,shipAlien);
 
- while (battleshipAlita.isAlive = true) {
-  if (battleshipAlita.hull > 0) {
-    console.log(`Your ship's Hull is currently at ${}.`)
-  }
-  if (alienShip )
-  if (attack === true) {
-    console.log("successful hit")
-  } else {
-    console.log("Oops! You missed! Try again.")
-  }
- }
+//  while (battleshipAlita.isAlive = true) {
+//   if (battleshipAlita.hull > 0) {
+//     console.log(`Your ship's Hull is currently at ${}.`)
+//   }
+//   if (alienShip )
+//   if (attack === true) {
+//     console.log("successful hit")
+//   } else {
+//     console.log("Oops! You missed! Try again.")
+//   }
+//  }
 
           
         //   attack(target) {
